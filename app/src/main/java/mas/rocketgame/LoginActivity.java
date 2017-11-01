@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
 
 /**
  * A login screen that offers login via email/password. Taken from Android Studio, implements some UI / Permission Changes.
- * "Made" by Alex on 10/9/2017
+ * "Made" by Zack on 10/31/2017
  */
 public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
