@@ -17,7 +17,7 @@ public class DashboardActivity extends AppCompatActivity {
         setTheme(android.R.style.Theme_Holo);
         setContentView(R.layout.activity_dashboard);
 
-
+        //initialize button
         Button takeMeasurementButton = (Button) findViewById(R.id.measurement_button);
         takeMeasurementButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,5 +26,7 @@ public class DashboardActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
