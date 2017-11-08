@@ -1,6 +1,7 @@
 package mas.rocketgame;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -45,6 +46,15 @@ private Button startButton;
                     buttonPressed = true;
                     startButton.setText("Stop");
                 }
+            }
+        });
+
+        Button startRocket = (Button) findViewById(R.id.timeToFly);
+        startRocket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RocketActivity.class);
+                startActivity(intent);
             }
         });
         AudioDispatcher dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050, 1024, 0);
