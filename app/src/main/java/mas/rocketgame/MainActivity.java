@@ -27,7 +27,7 @@ private Button startButton;
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.RECORD_AUDIO}, 1);
         }
-        setTheme(android.R.style.Theme_Holo);
+        setTheme(android.R.style.Theme_Material_NoActionBar);
         setContentView(R.layout.activity_main);
         startButton = (Button) findViewById(R.id.start);
         startButton.setOnClickListener(new View.OnClickListener() {
