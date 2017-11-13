@@ -67,6 +67,10 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        //load image from database
+//        logoImage.setImageBitmap(BitmapFactory.decodeByteArray( currentAccount.accImage,
+//                0,currentAccount.accImage.length));
+
 
     }
 }
