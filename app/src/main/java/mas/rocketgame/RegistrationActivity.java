@@ -28,7 +28,7 @@ import java.sql.Blob;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-
+    DatabaseHelper helper = new DatabaseHelper(this);
     private static int RESULT_LOAD_IMAGE = 1;
     ImageView thumbnail = null;
     Bitmap myBitmap = null;
@@ -41,10 +41,10 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         thumbnail = (ImageView) findViewById(R.id.imgView);
 
-        final EditText etAge = (EditText) findViewById(R.id.etAge);
+        final EditText etConfirmPassword = (EditText) findViewById(R.id.etConfirmPassword);
         final EditText etName = (EditText) findViewById(R.id.etName);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        final EditText etUsername = (EditText) findViewById(R.id.etUsername);
+        final EditText etEmail = (EditText) findViewById(R.id.etEmail);
         Button regButton = (Button) findViewById(R.id.register_button);
 
 
@@ -64,15 +64,25 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-//                final String name = etName.getText().toString();
-//                final String username = etUsername.getText().toString();
-//                final String password = etPassword.getText().toString();
-//                final int age = Integer.parseInt(etAge.getText().toString());
+                final String name = etName.getText().toString();
+                final String email = etEmail.getText().toString();
+                final String password = etPassword.getText().toString();
+                final String confirmPassword = etConfirmPassword.getText().toString();
 
-//                ByteArrayOutputStream bos = new ByteArrayOutputStream();
-//                myBitmap.compress(Bitmap.CompressFormat.PNG, 100, bos);
-//                byte[] bArray = bos.toByteArray();
-               // Blob blob = (Blob) bArray;
+
+
+                if (!password.equals(confirmPassword)){
+                    Toast pass = Toast.makeText(RegistrationActivity.this, "Passwords don't match", Toast.LENGTH_SHORT);
+                    pass.show();
+                }
+                else{
+                    User user = new User();
+                    user.setName(name);
+                    user.setEmail(email);
+                    user.setPassword(password);
+
+                    helper.addUser(user);
+                }
 
                 Toast.makeText(getApplicationContext(), "User successfully added!", Toast.LENGTH_SHORT).show();
 

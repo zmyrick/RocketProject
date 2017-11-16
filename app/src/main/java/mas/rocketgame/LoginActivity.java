@@ -23,6 +23,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +56,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+
+    DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,8 +149,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            Intent intent = new Intent(this, DashboardActivity.class);
-            startActivity(intent);
+
+            String pass = helper.searchPass(email);
+            if(password.equals(pass)){
+                Intent intent = new Intent(this, DashboardActivity.class);
+                startActivity(intent);
+            }
+            else {
+                Toast temp = Toast.makeText(LoginActivity.this, "Username and password don't match", Toast.LENGTH_SHORT);
+                temp.show();
+            }
+
             //mAuthTask = new UserLoginTask(email, password);
             //mAuthTask.execute((Void) null);
         }

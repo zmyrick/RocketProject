@@ -41,13 +41,13 @@
         app:layout_constraintTop_toBottomOf="@+id/uploadImageButton" />
 
     <EditText
-        android:id="@+id/etUsername"
+        android:id="@+id/etEmail"
         android:layout_width="375dp"
         android:layout_height="42dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etName" />
@@ -62,17 +62,17 @@
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <EditText
-        android:id="@+id/etAge"
+        android:id="@+id/etConfirmPassword"
         android:layout_width="375dp"
         android:layout_height="42dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:hint="Age"
-        android:inputType="number"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
@@ -84,6 +84,6 @@
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
 
 </android.support.constraint.ConstraintLayout>

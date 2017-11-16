@@ -22,10 +22,10 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
 
-        final EditText nameInput = (EditText) findViewById(R.id.etName);
-        final TextView nameDisplay = (TextView) findViewById(R.id.usernameLabel);
-//        String finalName = nameInput.getText().toString();
-//        nameDisplay.setText(finalName);
+        EditText nameInput = (EditText) findViewById(R.id.etName);
+        TextView nameDisplay = (TextView) findViewById(R.id.usernameLabel);
+        String finalName = getIntent().getStringExtra("email");
+        nameDisplay.setText(finalName);
 
         //initialize Measurement button
         Button takeMeasurementButton = (Button) findViewById(R.id.measurement_button);
