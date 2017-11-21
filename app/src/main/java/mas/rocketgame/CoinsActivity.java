@@ -9,5 +9,6 @@ public class CoinsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coins);
+        setTheme(android.R.style.Theme_Material_NoActionBar);
     }
 }

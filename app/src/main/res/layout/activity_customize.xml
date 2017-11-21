@@ -6,11 +6,90 @@
     android:layout_height="match_parent"
     tools:context="mas.rocketgame.CustomizeActivity">
 
+    <TextView
+        android:id="@+id/costAmount"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="15dp"
+        android:text="Text"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/costLabel" />
+
+    <TextView
+        android:id="@+id/coinAmount"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:text="Text"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coinsLabel" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="265dp"
+        app:layout_constraintStart_toEndOf="@+id/costAmount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coin_button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="265dp"
+        app:layout_constraintStart_toEndOf="@+id/coinAmount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coin_button" />
+
+    <Button
+        android:id="@+id/purchaseButton"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Purchase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/costLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="231dp"
+        android:text="Cost:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/rocketDisplay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coinsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="231dp"
+        android:text="Available:"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/rocketDisplay"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toStartOf="@+id/scrollView2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/scrollView2"

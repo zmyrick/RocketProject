@@ -145,23 +145,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             // There was an error; don't attempt login and focus the first
             // form field with an error.
             focusView.requestFocus();
-        } else {
+        }
+
+        String pass = helper.searchPass(email);
+        if(password.equals(pass)){
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
+            Intent intent = new Intent(this, DashboardActivity.class);
+            startActivity(intent);
 
-            String pass = helper.searchPass(email);
-            if(password.equals(pass)){
-                Intent intent = new Intent(this, DashboardActivity.class);
-                startActivity(intent);
-            }
-            else {
-                Toast temp = Toast.makeText(LoginActivity.this, "Username and password don't match", Toast.LENGTH_SHORT);
-                temp.show();
-            }
-
-            //mAuthTask = new UserLoginTask(email, password);
-            //mAuthTask.execute((Void) null);
+        }
+        else {
+            Toast temp = Toast.makeText(LoginActivity.this, "User does not exist!", Toast.LENGTH_SHORT);
+            temp.show();
         }
     }
 
