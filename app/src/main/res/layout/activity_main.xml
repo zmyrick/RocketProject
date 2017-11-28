@@ -7,27 +7,62 @@
     tools:context="mas.rocketgame.MainActivity">
 
 
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/timeToFly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentRocket" />
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Restart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
+
+
+    <ImageView
+        android:id="@+id/currentRocket"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_rocket" />
+
     <Button
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
+        android:layout_marginBottom="154dp"
+        android:layout_marginStart="88dp"
+        android:backgroundTint="@android:color/white"
+        android:text="Blow"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/timeToFly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginEnd="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="154dp"
+        android:layout_marginEnd="88dp"
+        android:backgroundTint="@android:color/holo_red_light"
         android:text="TimeToFly"
+        android:textColor="@android:color/white"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
