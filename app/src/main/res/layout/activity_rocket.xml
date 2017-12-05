@@ -52,7 +52,7 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         app:layout_constraintVertical_bias="0.90999997"
-        app:srcCompat="@drawable/rocket" />
+        app:srcCompat="@drawable/cherry_blossom" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
