@@ -1,6 +1,7 @@
 package mas.rocketgame;
 
 import android.animation.ValueAnimator;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.LinearInterpolator;
@@ -21,6 +22,7 @@ public class RocketActivity extends AppCompatActivity {
         final ImageView backgroundOne = (ImageView) findViewById(R.id.background_one);
         final ImageView backgroundTwo = (ImageView) findViewById(R.id.background_two);
         final ImageView backgroundThree = (ImageView) findViewById(R.id.background_three);
+        ImageView rocketImage = (ImageView) findViewById(R.id.rocket_move);
 
 
         final ValueAnimator animator = ValueAnimator.ofFloat(0.0f, 1.0f);

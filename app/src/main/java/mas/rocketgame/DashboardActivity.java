@@ -24,7 +24,8 @@ public class DashboardActivity extends AppCompatActivity {
 
         EditText nameInput = (EditText) findViewById(R.id.etName);
         TextView nameDisplay = (TextView) findViewById(R.id.usernameLabel);
-        String finalName = getIntent().getStringExtra("email");
+        String finalName =  "John Tyler";
+                //getIntent().getStringExtra("email");
         nameDisplay.setText(finalName);
 
         //initialize Measurement button

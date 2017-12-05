@@ -27,6 +27,7 @@ public class CoinsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coins);
         setTheme(android.R.style.Theme_Material_NoActionBar);
+        setTheme(android.R.style.Theme_Material_NoActionBar);
 
         //int stuff
         displayQuestion = (TextView) findViewById(R.id.displayQuestion);
